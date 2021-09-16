@@ -1,6 +1,8 @@
 let first_item = document.createElement("li");
 let list = document.getElementById("chathistory");
 
+document.querySelector("#chatbutton").addEventListener("click" , clickHandler);
+document.querySelector("#clearbutton").addEventListener("click", clearHandler);
 
 var clickHandler = function(eventObject) {
   let boxValue = document.getElementById("chatbox").value;
@@ -14,6 +16,3 @@ var clickHandler = function(eventObject) {
 var clearHandler = function(eventObject) {
   list.innerHTML = "";
 }
-
-document.querySelector("#chatbutton").addEventListener("click" , clickHandler);
-document.querySelector("#clearbutton").addEventListener("click", clearHandler);
